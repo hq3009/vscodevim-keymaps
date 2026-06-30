@@ -1,0 +1,164 @@
+{
+  "$schema": "https://json.schemastore.org/package.json",
+  "name": "vscodevim-keymaps",
+  "displayName": "VSCodeVim Keymaps",
+  "publisher": "hq3009",
+  "author": {
+    "name": "HQ",
+    "email": "hq3009@gmail.com",
+    "url": "https://github.com/hq3009"
+  },
+  "description": "Keymaps for VSCodeVim extension with leader keys.",
+  "license": "MIT",
+  "version": "0.0.1",
+  "icon": "assets/logo.png",
+  "engines": {
+    "vscode": "^1.100.0"
+  },
+  "categories": [
+    "Keymaps"
+  ],
+  "keywords": [
+    "keymap",
+    "keybinding",
+    "vim"
+  ],
+  "repository": {
+    "url": "https://github.com/hq3009/vscodevim-keymaps",
+    "type": "git"
+  },
+  "bugs": {
+    "url": "https://github.com/hq3009/vscodevim-keymaps/issues"
+  },
+  "extensionDependencies": [
+    "vscodevim.vim"
+  ],
+  "extensionPack": [
+    "vscodevim.vim"
+  ],
+  "pricing": "Free",
+  "contributes": {
+    "configurationDefaults": {
+      "vim.useSystemClipboard": true,
+      "vim.easymotion": true,
+      "vim.easymotionKeys": "asdfghjkqertyuvopzxcvbnl",
+      "vim.autoSwitchInputMethod.enable": true,
+      "vim.leader": "<space>",
+      "vim.handleKeys": {
+        "<tab>": false,
+        "<C-b>": false,
+        "<C-f>": false
+      },
+      "vim.normalModeKeyBindingsNonRecursive": [
+        { "before": [ "<leader>", "<leader>" ], "commands": [ "workbench.action.showCommands" ] },
+        { "before": [ "<leader>", ";" ], "after": [ ":" ] },
+        { "before": [ "j" ], "after": [ "g", "j" ] },
+        { "before": [ "k" ], "after": [ "g", "k" ] },
+        { "before": [ "g", "j" ], "after": [ "j" ] },
+        { "before": [ "g", "k" ], "after": [ "k" ] },
+        { "before": [ "H" ], "after": [ "^" ] },
+        { "before": [ "L" ], "after": [ "$" ] },
+        { "before": [ "g", "h" ], "after": [ "g", "^" ] },
+        { "before": [ "g", "l" ], "after": [ "g", "$" ] },
+        { "before": [ "g", "." ], "after": [ "G" ] },
+        { "before": [ "g", "m" ], "after": [ "%" ] },
+        { "before": [ "g", "H" ], "after": [ "H" ] },
+        { "before": [ "g", "L" ], "after": [ "L" ] },
+        { "before": [ "g", "M" ], "after": [ "M" ] },
+        { "before": [ "f" ], "after": [ "<leader>", "<leader>", "f" ] },
+        { "before": [ "F" ], "after": [ "<leader>", "<leader>", "F" ] },
+        { "before": [ "<leader>", "." ], "after": [ "<leader>", "<leader>", "s" ] },
+        { "before": [ "<leader>", "," ], "after": [ "<leader>", "<leader>", "<leader>", "b", "d", "w" ] },
+        { "before": [ "<leader>", "l" ], "after": [ "<leader>", "<leader>", "<leader>", "b", "d", "j", "k" ] },
+        { "before": [ "<leader>", "j", "o" ], "commands": [ "outline.focus" ] },
+        { "before": [ "<C-l>" ], "after": [ "z", "z" ] },
+        { "before": [ "<C-a>" ], "commands": [ "editor.action.selectAll" ] },
+        { "before": [ "<leader>", "v", "h" ], "after": [ "g", "g", "V", "G" ] },
+        { "before": [ "<C-h>" ], "commands": [ "editor.action.startFindReplaceAction" ] },
+        { "before": [ "<C-j>" ], "after": [ "i", "<enter>", "<esc>" ] },
+        { "before": [ "<leader>", "\\" ], "commands": [ "editor.action.toggleWordWrap" ] },
+        { "before": [ "<leader>", "z" ], "after": [ "z", "a" ] },
+        { "before": [ "<leader>", "e", "f" ], "commands": [ "editor.action.format" ] },
+        { "before": [ "<leader>", "i", "s" ], "commands": [ "editor.action.insertSnippet" ] },
+        { "before": [ "<leader>", "i", "<tab>" ], "after": [ "i", "\t", "<esc>" ] },
+        { "before": [ "<leader>", "c", "l" ], "commands": [ "editor.action.commentLine" ] },
+        { "before": [ "<leader>", "s", "s" ], "commands": [ "actions.find" ] },
+        { "before": [ "<leader>", "s", "p" ], "commands": [ "workbench.action.findInFiles" ] },
+        { "before": [ "<leader>", "r", "r" ], "commands": [ "editor.action.startFindReplaceAction" ] },
+        { "before": [ "<leader>", "r", "p" ], "commands": [ "workbench.action.replaceInFiles" ] },
+        { "before": [ "<leader>", "v", "n" ], "commands": [ ":nohl" ] },
+        { "before": [ "<leader>", "b", "b" ], "commands": [ "workbench.action.showAllEditors" ] },
+        { "before": [ "<leader>", "b", "o" ], "commands": [ "workbench.action.closeOtherEditors" ] },
+        { "before": [ "<leader>", "d" ], "commands": [ "workbench.action.closeEditorsInGroup" ] },
+        { "before": [ "<leader>", "k" ], "commands": [ "workbench.action.closeActiveEditor" ] },
+        { "before": [ "<leader>", "t", "l" ], "commands": [ "workbench.action.nextEditor" ] },
+        { "before": [ "<leader>", "t", "h" ], "commands": [ "workbench.action.previousEditor" ] },
+        { "before": [ "<leader>", "w", "h" ], "commands": [ "workbench.action.focusLeftGroup" ] },
+        { "before": [ "<leader>", "w", "l" ], "commands": [ "workbench.action.focusRightGroup" ] },
+        { "before": [ "<leader>", "w", "j" ], "commands": [ "workbench.action.focusBelowGroup" ] },
+        { "before": [ "<leader>", "w", "k" ], "commands": [ "workbench.action.focusAboveGroup" ] },
+        { "before": [ "<leader>", "w", "o" ], "commands": [ "workbench.action.editorLayoutSingle" ] },
+        { "before": [ "<leader>", "w", "s" ], "commands": [ "workbench.action.splitEditorDown" ] },
+        { "before": [ "<leader>", "w", "v" ], "commands": [ "workbench.action.splitEditorRight" ] },
+        { "before": [ "<leader>", "f", "." ], "commands": [ "workbench.action.quickOpen" ] },
+        { "before": [ "<leader>", "f", "e" ], "commands": [ "workbench.view.explorer" ] },
+        { "before": [ "<leader>", "f", "f" ], "commands": [ "workbench.action.files.openFile" ] },
+        { "before": [ "<leader>", "f", "o" ], "commands": [ "workbench.action.files.revealActiveFileInWindows" ] },
+        { "before": [ "<leader>", "f", "r" ], "commands": [ "workbench.action.openRecent" ] },
+        { "before": [ "<leader>", "f", "s" ], "commands": [ "workbench.action.files.save" ] },
+        { "before": [ "<leader>", "o" ], "commands": [ "workbench.action.files.openFolder" ] },
+        { "before": [ "<leader>", "g", "a" ], "commands": [ "git.stage" ] },
+        { "before": [ ",", "," ], "commands": [ "code-runner.run" ] }
+      ],
+      "vim.visualModeKeyBindingsNonRecursive": [
+        { "before": [ "s" ], "after": [ "S" ] },
+        { "before": [ "j" ], "after": [ "g", "j" ] },
+        { "before": [ "k" ], "after": [ "g", "k" ] },
+        { "before": [ "g", "j" ], "after": [ "j" ] },
+        { "before": [ "g", "k" ], "after": [ "k" ] },
+        { "before": [ "g", "." ], "after": [ "G" ] },
+        { "before": [ "H" ], "after": [ "^" ] },
+        { "before": [ "L" ], "after": [ "$" ] },
+        { "before": [ "g", "h" ], "after": [ "g", "^" ] },
+        { "before": [ "g", "l" ], "after": [ "g", "$" ] },
+        { "before": [ "g", "m" ], "after": [ "%" ] },
+        { "before": [ "f" ], "after": [ "<leader>", "<leader>", "f" ] },
+        { "before": [ "F" ], "after": [ "<leader>", "<leader>", "F" ] },
+        { "before": [ "<leader>", "." ], "after": [ "<leader>", "<leader>", "s" ] },
+        { "before": [ "<leader>", "," ], "after": [ "<leader>", "<leader>", "<leader>", "b", "d", "w" ] },
+        { "before": [ "<leader>", "l" ], "after": [ "<leader>", "<leader>", "<leader>", "b", "d", "j", "k" ] }
+      ],
+      "vim.insertModeKeyBindingsNonRecursive": [
+        { "before": [ "k", "j" ], "after": [ "<esc>" ] },
+        { "before": [ "j", "k" ], "after": [ "<esc>" ] },
+        { "before": [ "<C-a>" ], "commands": [ "cursorHome" ] },
+        { "before": [ "<C-e>" ], "commands": [ "cursorEnd" ] },
+        { "before": [ "<C-d>" ], "commands": [ "deleteRight" ] },
+        { "before": [ "<C-j>" ], "after": [ "<enter>" ] },
+        { "before": [ "<C-l>" ], "commands": [ "cursorRight" ] },
+        { "before": [ "<C-n>" ], "commands": [ "cursorDown" ] },
+        { "before": [ "<C-p>" ], "commands": [ "cursorUp" ] }
+      ]
+    },
+    "keybindings": [
+      { "key": "ctrl+b", "command": "cursorLeft", "when": "vim.mode == 'Insert'" },
+      { "key": "alt+b", "command": "cursorWordLeft", "when": "vim.mode == 'Insert'" },
+      { "key": "alt+l", "command": "cursorWordStartRight", "when": "vim.mode == 'Insert'" },
+      { "key": "alt+d", "command": "deleteWordRight", "when": "vim.mode == 'Insert'" },
+      { "key": "alt+i", "command": "editor.action.insertSnippet", "when": "vim.mode == 'Insert'" },
+      { "key": ", ,", "command": "notebook.cell.execute", "when": "notebookEditorFocused && vim.mode == 'Normal'" },
+      { "key": ", a", "command": "notebook.cell.insertCodeCellAbove", "when": "notebookEditorFocused && vim.mode == 'Normal'" },
+      { "key": ", b", "command": "notebook.cell.insertCodeCellBelow", "when": "notebookEditorFocused && vim.mode == 'Normal'" },
+      { "key": ", c", "command": "notebook.cell.changeToCode", "when": "notebookEditorFocused && vim.mode == 'Normal'" },
+      { "key": ", f", "command": "notebook.formatCell", "when": "notebookEditorFocused && vim.mode == 'Normal'" },
+      { "key": ", j", "command": "notebook.cell.joinBelow", "when": "notebookEditorFocused && vim.mode == 'Normal'" },
+      { "key": ", m", "command": "notebook.cell.changeToMarkdown", "when": "notebookEditorFocused && vim.mode == 'Normal'" },
+      { "key": ", shift+m", "command": "notebook.cell.insertMarkdownCellBelow", "when": "notebookEditorFocused && vim.mode == 'Normal'" },
+      { "key": ", o", "command": "notebook.cell.clearOutputs", "when": "notebookEditorFocused && vim.mode == 'Normal'" },
+      { "key": ", shift+o", "command": "notebook.clearAllCellsOutputs", "when": "notebookEditorFocused && vim.mode == 'Normal'" },
+      { "key": ", q", "command": "notebook.cell.quitEdit", "when": "notebookEditorFocused && vim.mode == 'Normal'" },
+      { "key": ", s", "command": "notebook.cell.split", "when": "notebookEditorFocused && vim.mode == 'Normal'" },
+      { "key": ", z", "command": "notebook.centerActiveCell", "when": "notebookEditorFocused && vim.mode == 'Normal'" }
+    ]
+  }
+}
