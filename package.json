@@ -10,7 +10,7 @@
   },
   "description": "Keymaps for VSCodeVim extension with leader keys.",
   "license": "MIT",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "icon": "assets/logo.png",
   "engines": {
     "vscode": "^1.100.0"
@@ -141,6 +141,8 @@
       ]
     },
     "keybindings": [
+      { "key": "ctrl+b", "command": "markdown.extension.editing.toggleBold",
+        "when": "editorTextFocus && !editorReadonly && editorLangId == markdown && vim.mode == 'Visual'" },
       { "key": "ctrl+b", "command": "cursorLeft", "when": "vim.mode == 'Insert'" },
       { "key": "alt+b", "command": "cursorWordLeft", "when": "vim.mode == 'Insert'" },
       { "key": "alt+l", "command": "cursorWordStartRight", "when": "vim.mode == 'Insert'" },
