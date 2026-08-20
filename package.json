@@ -129,8 +129,6 @@
         { "before": [ "<leader>", "l" ], "after": [ "<leader>", "<leader>", "<leader>", "b", "d", "j", "k" ] }
       ],
       "vim.insertModeKeyBindingsNonRecursive": [
-        { "before": [ "k", "j" ], "after": [ "<esc>" ] },
-        { "before": [ "j", "k" ], "after": [ "<esc>" ] },
         { "before": [ "<C-a>" ], "commands": [ "cursorHome" ] },
         { "before": [ "<C-e>" ], "commands": [ "cursorEnd" ] },
         { "before": [ "<C-d>" ], "commands": [ "deleteRight" ] },
