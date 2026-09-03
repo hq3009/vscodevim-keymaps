@@ -8,15 +8,15 @@ This extension can be installed locally from a VSIX package.
 
 Package the extension:
 
-  ```bash
-  npx @vscode/vsce package
-  ```
+```bash
+npx @vscode/vsce package
+```
 
 Install the generated `.vsix` file:
 
-  ```bash
-  code --install-extension vscodevim-keymaps-0.0.1.vsix --force
-  ```
+```bash
+code --install-extension vscodevim-keymaps-0.0.1.vsix --force
+```
 
 Extension identifier: `hq3009.vscodevim-keymaps`
 
@@ -64,13 +64,12 @@ Only representative keymaps are shown below. Full mappings are defined in `packa
 
 ### Insert Mode Examples
 
-| Key         | Description               |
-| ----------- | ------------------------- |
-| `kj` / `jk` | Exit insert mode          |
-| `<C-a>`     | Move cursor to line start |
-| `<C-e>`     | Move cursor to line end   |
-| `<C-d>`     | Delete right              |
-| `<C-j>`     | Insert newline            |
+| Key     | Description               |
+| ------- | ------------------------- |
+| `<C-a>` | Move cursor to line start |
+| `<C-e>` | Move cursor to line end   |
+| `<C-d>` | Delete right              |
+| `<C-j>` | Insert newline            |
 
 ### Suggestions and Quick Input
 
